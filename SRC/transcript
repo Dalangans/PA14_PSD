@@ -1,0 +1,703 @@
+# Compile of BMPRead.vhd failed with 1 errors.
+# Compile of BMPRead.vhd failed with 10 errors.
+# Compile of BMPRead.vhd failed with 2 errors.
+# Compile of BMPRead.vhd failed with 1 errors.
+# Compile of BMPRead.vhd failed with 2 errors.
+# Compile of BMPRead.vhd failed with 2 errors.
+# Compile of BMPRead.vhd failed with 2 errors.
+# Compile of BMPRead.vhd failed with 2 errors.
+# Compile of BMPRead.vhd was successful with warnings.
+vsim -gui work.bmpread
+# vsim -gui work.bmpread 
+# Start time: 19:30:34 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Fatal: (vsim-3336) Attempt to read past the end of file "input.bmp".
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__18 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Fatal error in ForLoop loop at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 28
+# 
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 28 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 28 ForLoop loop
+# 
+# Compile of BMPRead.vhd failed with 8 errors.
+# Compile of BMPRead.vhd failed with 6 errors.
+# Compile of BMPRead.vhd failed with 6 errors.
+# Compile of BMPRead.vhd failed with 6 errors.
+# Compile of BMPRead.vhd failed with 6 errors.
+# Compile of BMPRead.vhd failed with 7 errors.
+# Compile of BMPRead.vhd failed with 6 errors.
+# Compile of BMPRead.vhd failed with 5 errors.
+# Compile of BMPRead.vhd failed with 5 errors.
+# Compile of BMPRead.vhd failed with 4 errors.
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# End time: 19:57:26 on Nov 29,2024, Elapsed time: 0:26:52
+# Errors: 1, Warnings: 24
+# vsim -gui work.bmpread 
+# Start time: 19:57:26 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+# ** Warning: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Fatal: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Fatal error in ForLoop loop at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 40
+# 
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+restart
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# End time: 20:05:18 on Nov 29,2024, Elapsed time: 0:07:52
+# Errors: 1, Warnings: 3
+# vsim -gui work.bmpread 
+# Start time: 20:05:18 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+# ** Warning: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Fatal: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Fatal error in ForLoop loop at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 40
+# 
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run -continue
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+quit -sim
+# End time: 20:10:49 on Nov 29,2024, Elapsed time: 0:05:31
+# Errors: 1, Warnings: 2
+vsim -gui work.bmpread
+# vsim -gui work.bmpread 
+# Start time: 20:11:36 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+# ** Warning: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+add wave -position insertpoint sim:/bmpread/*
+quit -sim
+# End time: 20:12:04 on Nov 29,2024, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 2
+vsim -gui work.bmpread
+# vsim -gui work.bmpread 
+# Start time: 20:12:25 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+# ** Warning: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Fatal: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Fatal error in ForLoop loop at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 40
+# 
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# End time: 20:14:29 on Nov 29,2024, Elapsed time: 0:02:04
+# Errors: 1, Warnings: 3
+# vsim -gui work.bmpread 
+# Start time: 20:14:29 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+# ** Warning: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Fatal: (vsim-7) Failed to open VHDL file "boeing.bmp" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Fatal error in ForLoop loop at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 40
+# 
+# HDL call sequence:
+# Stopped at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd 40 ForLoop loop
+# 
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# End time: 20:16:37 on Nov 29,2024, Elapsed time: 0:02:08
+# Errors: 1, Warnings: 3
+# vsim -gui work.bmpread 
+# Start time: 20:16:37 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+# Compile of BMPRead.vhd was successful.
+run
+# ** Note: Header[0] = 'B'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[1] = 'M'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[2] = c138
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[3] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[4] = '£'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[5] = stx
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[6] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[7] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[8] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[9] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[10] = c138
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[11] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[12] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[13] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[14] = '|'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[15] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[16] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[17] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[18] = '@'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[19] = vt
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[20] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[21] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[22] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[23] = dc4
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[24] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[25] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[26] = soh
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[27] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[28] = can
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[29] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[30] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[31] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[32] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[33] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[34] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[35] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[36] = '£'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[37] = stx
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[38] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[39] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[40] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[41] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[42] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[43] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[44] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[45] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[46] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[47] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[48] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[49] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[50] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[51] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[52] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[53] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Failure: Pixel array offset in header is not 54 bytes
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Break in Process line__28 at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 60
+run
+# ** Failure: DIB headers size is not 40 bytes, is this a Windows BMP?
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Break in Process line__28 at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 69
+quit -sim
+# End time: 20:27:36 on Nov 29,2024, Elapsed time: 0:10:59
+# Errors: 2, Warnings: 2
+vsim -gui work.bmpread
+# vsim -gui work.bmpread 
+# Start time: 20:28:14 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Note: Header[0] = 'B'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[1] = 'M'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[2] = c138
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[3] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[4] = '°'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[5] = soh
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[6] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[7] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[8] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[9] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[10] = c138
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[11] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[12] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[13] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[14] = '|'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[15] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[16] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[17] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[18] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[19] = ff
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[20] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[21] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[22] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[23] = ff
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[24] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[25] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[26] = soh
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[27] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[28] = can
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[29] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[30] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[31] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[32] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[33] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[34] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[35] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[36] = '°'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[37] = soh
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[38] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[39] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[40] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[41] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[42] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[43] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[44] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[45] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[46] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[47] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[48] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[49] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[50] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[51] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[52] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[53] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Failure: Pixel array offset in header is not 54 bytes
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Break in Process line__28 at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 60
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# End time: 20:40:55 on Nov 29,2024, Elapsed time: 0:12:41
+# Errors: 1, Warnings: 2
+# vsim -gui work.bmpread 
+# Start time: 20:40:55 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+# Compile of BMPRead.vhd was successful.
+run
+# ** Failure: Unsupported DIB header size: 124
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Break in Process line__28 at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 66
+quit -sim
+# End time: 20:42:28 on Nov 29,2024, Elapsed time: 0:01:33
+# Errors: 1, Warnings: 2
+vsim -gui work.bmpread
+# vsim -gui work.bmpread 
+# Start time: 20:42:54 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Failure: Unsupported DIB header size: 124
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Break in Process line__28 at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 66
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# End time: 20:45:44 on Nov 29,2024, Elapsed time: 0:02:50
+# Errors: 1, Warnings: 2
+# vsim -gui work.bmpread 
+# Start time: 20:45:44 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Failure: Unsupported DIB header size: 124
+#    Time: 0 ps  Iteration: 0  Process: /bmpread/line__28 File: C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+# Break in Process line__28 at C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd line 66
+quit -sim
+# End time: 20:52:43 on Nov 29,2024, Elapsed time: 0:06:59
+# Errors: 1, Warnings: 1
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# vsim -gui work.bmpread 
+# Start time: 20:55:03 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Note: Header[0] = 'B'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[1] = 'M'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[2] = '8'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[3] = 'é'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[4] = bel
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[5] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[6] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[7] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[8] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[9] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[10] = '6'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[11] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[12] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[13] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[14] = '('
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[15] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[16] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[17] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[18] = 'à'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[19] = soh
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[20] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[21] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[22] = 'h'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[23] = soh
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[24] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[25] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[26] = soh
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[27] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[28] = can
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[29] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[30] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[31] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[32] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[33] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[34] = stx
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[35] = 'é'
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[36] = bel
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[37] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[38] = dc2
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[39] = vt
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[40] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[41] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[42] = dc2
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[43] = vt
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[44] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[45] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[46] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[47] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[48] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[49] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[50] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[51] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[52] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: Header[53] = nul
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# ** Note: image_width: 480, image_height: 360
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+run
+run
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# End time: 20:58:45 on Nov 29,2024, Elapsed time: 0:03:42
+# Errors: 0, Warnings: 3
+# vsim -gui work.bmpread 
+# Start time: 20:58:45 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Note: image_width: 480, image_height: 360
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+# Compile of BMPRead.vhd was successful.
+vsim -gui work.bmpread
+# End time: 21:05:16 on Nov 29,2024, Elapsed time: 0:06:31
+# Errors: 0, Warnings: 2
+# vsim -gui work.bmpread 
+# Start time: 21:05:16 on Nov 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bmpread(rtl)
+add wave -position insertpoint sim:/bmpread/*
+force -freeze sim:/bmpread/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Note: image_width: 480, image_height: 360
+#    Time: 0 ps  Iteration: 0  Instance: /bmpread
+quit -sim
+# End time: 21:23:18 on Nov 29,2024, Elapsed time: 0:18:02
+# Errors: 0, Warnings: 1
+# Compile of ModuleINFOHEADER.vhd was successful.

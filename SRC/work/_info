@@ -1,0 +1,97 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/USER/Documents/Semester 3/PSD/compress
+Ebmpread
+Z0 w1732889088
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 28
+Z4 dC:/Users/USER/Documents/Semester 3/PA14_PSD/SRC
+Z5 8C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+Z6 FC:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd
+l0
+L6 1
+V`BbP@]1XkJ1^U6V`k83540
+!s100 J9E2H31H1IhO[]P]M90CV0
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1732889099
+!i10b 1
+Z9 !s108 1732889099.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd|
+Z11 !s107 C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/BMPRead.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+DEx4 work 7 bmpread 0 22 `BbP@]1XkJ1^U6V`k83540
+!i122 28
+l25
+L13 158
+VXUl6<o]2OnJRZaOJAai<H1
+!s100 `c3fH0O4Tlkgk3SU`NNV62
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Emoduleinfoheader
+Z14 w1732890151
+R1
+R2
+R3
+!i122 29
+R4
+Z15 8C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/ModuleINFOHEADER.vhd
+Z16 FC:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/ModuleINFOHEADER.vhd
+l0
+L6 1
+V4kgAY[KU3o1l10M9TlQXP0
+!s100 bJhFJ;Q5Z[Po^Idgn?Pjd3
+R7
+32
+Z17 !s110 1732890552
+!i10b 1
+Z18 !s108 1732890551.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/ModuleINFOHEADER.vhd|
+!s107 C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/ModuleINFOHEADER.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 16 moduleinfoheader 0 22 4kgAY[KU3o1l10M9TlQXP0
+!i122 29
+l25
+L13 160
+Vb4UHdO?HXm[YY?z2e9[4V3
+!s100 C>>a;4Hlfzi@B16jck4?X3
+R7
+32
+R17
+!i10b 1
+R18
+R19
+Z20 !s107 C:/Users/USER/Documents/Semester 3/PA14_PSD/SRC/ModuleINFOHEADER.vhd|
+!i113 1
+R12
+R13
