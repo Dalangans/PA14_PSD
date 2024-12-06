@@ -9,7 +9,10 @@ entity ReadWrite is
     port (
         clk : in std_logic;
         op  : in std_logic_vector(7 downto 0);
-        done_in: in std_logic
+        done_in: in std_logic;
+        r_out   : out std_logic_vector(7 downto 0);
+        g_out   : out std_logic_vector(7 downto 0);
+        b_out   : out std_logic_vector(7 downto 0)
     );
 end entity ReadWrite;
 
@@ -79,15 +82,15 @@ begin
         
             -- Read image width
             image_width := character'pos(header(18)) +
-            character'pos(header(19)) * 2**8 +
-            character'pos(header(20)) * 2**16 +
-            character'pos(header(21)) * 2**24;
+                            character'pos(header(19)) * 2**8 +
+                            character'pos(header(20)) * 2**16 +
+                            character'pos(header(21)) * 2**24;
         
             -- Read image height
             image_height := character'pos(header(22)) +
-            character'pos(header(23)) * 2**8 +
-            character'pos(header(24)) * 2**16 +
-            character'pos(header(25)) * 2**24;
+                            character'pos(header(23)) * 2**8 +
+                            character'pos(header(24)) * 2**16 +
+                            character'pos(header(25)) * 2**24;
         
             report "image_width: " & integer'image(image_width) &
             ", image_height: " & integer'image(image_height);

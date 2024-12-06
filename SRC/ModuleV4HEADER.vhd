@@ -1,1 +1,0 @@
--- BMP format V4HEADER
