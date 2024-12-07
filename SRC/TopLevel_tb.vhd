@@ -7,64 +7,71 @@ end entity TopLevel_tb;
 
 architecture tb of TopLevel_tb is
 
-    -- Component declaration
+    -- Component declaration for the DUT
     component TopLevel
         port (
-            clk    : in std_logic;
-            start  : in std_logic;
-            rst    : in std_logic;
-            status : out std_logic
+            clk        : in std_logic;
+            start      : in std_logic;
+            rst        : in std_logic;
+            op_code    : in std_logic_vector (3 downto 0);
+            status     : out std_logic
         );
     end component;
 
-    -- Signal declarations
-    signal clk_tb    : std_logic := '0';
-    signal start_tb  : std_logic := '0';
-    signal rst_tb    : std_logic := '0';
-    signal status_tb : std_logic;
+    -- Signals to connect to DUT
+    signal clk        : std_logic := '0';
+    signal start      : std_logic := '0';
+    signal rst        : std_logic := '1';
+    signal op_code    : std_logic_vector (3 downto 0) := (others => '0');
+    signal status     : std_logic;
 
-    constant clk_period : time := 10 ns; -- Clock period of 10 ns
+    -- Clock period definition
+    constant clk_period : time := 10 ns;
 
 begin
 
-    -- Instantiate the Unit Under Test (UUT)
-    uut: TopLevel
+    -- Instantiate the DUT
+    DUT: TopLevel
         port map (
-            clk    => clk_tb,
-            start  => start_tb,
-            rst    => rst_tb,
-            status => status_tb
+            clk     => clk,
+            start   => start,
+            rst     => rst,
+            op_code => op_code,
+            status  => status
         );
 
-    -- Clock process
-    clk_process: process
+    -- Clock generation process
+    clk_gen: process
     begin
-        while true loop
-            clk_tb <= '0';
-            wait for clk_period / 2;
-            clk_tb <= '1';
-            wait for clk_period / 2;
-        end loop;
-    end process;
+        clk <= '0';
+        wait for clk_period / 2;
+        clk <= '1';
+        wait for clk_period / 2;
+    end process clk_gen;
 
     -- Stimulus process
-    stimulus_process: process
+    stim_proc: process
     begin
-        -- Reset the system
-        rst_tb <= '1';
+        -- Initial reset
+        rst <= '1';
         wait for 20 ns;
-        rst_tb <= '0';
+        rst <= '0';
 
-        -- Apply start signal
-        start_tb <= '1';
-        wait for 50 ns;
-        start_tb <= '0';
-
-        -- Observe the behavior
+        -- Start signal activation
+        start <= '1';
+        op_code <= "0010"; -- Compression size = 2
         wait for 100 ns;
+        start <= '0';
 
-        -- End simulation
-        wait;
-    end process;
+        -- Wait until status = '1'
+        wait until status = '1';
+        if status = '1' then 
+            wait;
+        end if;
+        assert false report "Simulation ended after status = 1" severity note;
+
+        -- Stop the simulation
+        wait; -- Optionally replace with assert false to terminate simulation in some tools
+    end process stim_proc;
 
 end architecture tb;

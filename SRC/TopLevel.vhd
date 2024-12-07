@@ -8,6 +8,7 @@ entity TopLevel is
         clk        : in std_logic;
         start      : in std_logic;
         rst        : in std_logic;
+        op_code    : in std_logic_vector (3 downto 0);
         status     : out std_logic
     );
 end entity TopLevel;
@@ -31,6 +32,7 @@ architecture rtl of TopLevel is
         port (
             clk             : in std_logic;
             start           : in std_logic;
+            block_size      : in integer;
             image_in        : in image_type;
             header_in       : in header_type;
             img_width_in    : in integer;
@@ -62,6 +64,7 @@ architecture rtl of TopLevel is
     signal img_h_in_tp           : integer := 0;
     signal img_w_out_tp          : integer := 0;
     signal img_h_out_tp          : integer := 0;
+    signal compress_size         : integer := 0;
     signal start_r               : std_logic;
     signal start_wr              : std_logic;
     signal start_comprs          : std_logic;
@@ -92,6 +95,7 @@ begin
         port map(
             clk             => clk,
             start           => start_comprs,
+            block_size      => compress_size,
             image_in        => image_in_tp,
             header_in       => header_in_tp,
             img_width_in    => img_w_in_tp,
@@ -119,38 +123,65 @@ begin
         begin
             if rst = '1' then
                 current_state <= idle;
-                start_r  <= '0';
-                write_en <= '0';
-                start_wr <= '0';
+                start_r     <= '0';
+                write_en    <= '0';
+                start_comprs<= '0';
+                start_wr    <= '0';
+                status      <= '0';
             elsif rising_edge(clk) then
                 case current_state is
                     when idle =>
-                        write_en <= '0';
+                        start_r     <= '0';
+                        write_en    <= '0';
+                        start_comprs<= '0';
+                        start_wr    <= '0';
+                        status      <= '0';
+                        start_comprs <= '0';
                         if start = '1' then
                             start_r <= '1';
+                            current_state <= reading;
                         end if;
-                        current_state <= reading;
 
                     when reading =>
                         start_r <='0';
-                        current_state <= compress;
+                        if read_done = '1' then
+                            current_state <= compress;
+                        end if;
 
                     when compress =>
                         start_comprs <= '1';
+                        case op_code is
+                            when "0010" => 
+                                compress_size <= 2;
+                            when "0011" =>
+                                compress_size <= 3;
+                            when "0100" =>
+                                compress_size <= 4;
+                            when others =>
+                                null;
+                        end case;
                         if done_component = '1' then
                             start_comprs <= '0';
                             start_wr <='1';
                             current_state <= writing;
                         end if;
+                        report "Current state: " & state_type'image(current_state);
+                        report "write_done signal: " & std_logic'image(write_done);
+
                         
 
                     when writing =>
                         if write_done = '1' then
+                            start_wr <= '0';
                             current_state <= done;
+                            report "Current state: " & state_type'image(current_state);
+                            report "write_done signal: " & std_logic'image(write_done);
+
                         end if;
                     
                     when done =>
-                        start_wr <= '0';
+                        report "Current state: " & state_type'image(current_state);
+                        report "write_done signal: " & std_logic'image(write_done);
                         status <= '1';
                 end case;
             end if;

@@ -68,6 +68,7 @@ begin
                 end loop;
                 -- Indicate completion
                 file_close(out_file);
+                report "file closed";
             end if;
             done <= '1';
         end if;
