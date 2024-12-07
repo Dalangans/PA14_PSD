@@ -28,7 +28,7 @@ begin
         variable padding : integer;
         variable char : character;
     begin
-        if rising_edge(clk) then
+        if rising_edge(clk) and start = '1' then
             if start = '1' then
 
                 image_width := img_w_in;
@@ -66,10 +66,11 @@ begin
                     end loop;
                     
                 end loop;
+
                 -- Indicate completion
+                done <= '1';
                 file_close(out_file);
             end if;
-            done <= '1';
         end if;
     end process;
 end architecture rtl;

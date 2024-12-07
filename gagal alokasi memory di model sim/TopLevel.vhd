@@ -8,6 +8,7 @@ entity TopLevel is
         clk        : in std_logic;
         start      : in std_logic;
         rst        : in std_logic;
+        op_code    : in std_logic_vector(7 downto 0);
         status     : out std_logic
     );
 end entity TopLevel;
@@ -31,6 +32,7 @@ architecture rtl of TopLevel is
         port (
             clk             : in std_logic;
             start           : in std_logic;
+            op_code         : in std_logic_vector(7 downto 0);
             image_in        : in image_type;
             header_in       : in header_type;
             img_width_in    : in integer;
@@ -92,6 +94,7 @@ begin
         port map(
             clk             => clk,
             start           => start_comprs,
+            op_code         => op_code,
             image_in        => image_in_tp,
             header_in       => header_in_tp,
             img_width_in    => img_w_in_tp,
@@ -143,7 +146,6 @@ begin
                             current_state <= writing;
                         end if;
                         
-
                     when writing =>
                         if write_done = '1' then
                             current_state <= done;
