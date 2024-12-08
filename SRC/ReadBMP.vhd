@@ -12,16 +12,15 @@ entity ReadBMP is
         img_w_out   : out integer;
         img_h_out   : out integer;
         header_out  : out header_type;
-        image_out   : out image_type;
-        write_en    : out std_logic 
+        image_out   : out image_type
     );
 end entity ReadBMP;
 
 architecture rtl of ReadBMP is    
-    signal processing_done : std_logic;   -- Processing completion flag
-    signal see             : std_logic_vector(7 downto 0);
+    signal processing_done : std_logic;   -- Process debug flag
+    signal see             : std_logic_vector(7 downto 0); -- debug signal
 
-    -- Helper function to convert std_logic_vector to string
+    -- Fungsi untuk konversi std_logic_vector ke string
     function to_string(slv: std_logic_vector) return string is
         variable result: string(1 to slv'length);
     begin
@@ -37,7 +36,7 @@ architecture rtl of ReadBMP is
     
 begin
     process (clk)
-        type char_file is file of character; -- Define BMP file type
+        type char_file is file of character;
         file bmp_file : char_file open read_mode is "input.bmp";
         variable image_data   : image_type;
         variable header       : header_type;
@@ -49,19 +48,19 @@ begin
 
     begin
         if rising_edge(clk) and start = '1' then
-            -- Read header
+            -- Baca Header BMP
             for i in 0 to 53 loop
                 read(bmp_file, header(i));
             end loop;
 
             header_out <= header;
 
-            -- Perform validations (header ID, pixel offset, DIB size, etc.)
+            -- Validasi Header 
             assert header(0) = 'B' and header(1) = 'M'
                 report "First two bytes are not 'BM'. This is not a BMP file"
                 severity failure;
 
-            -- Extract image width and height
+            -- Mengambil Panjang dan lebar pixel
             image_width := character'pos(header(18)) +
                            character'pos(header(19)) * 2**8 +
                            character'pos(header(20)) * 2**16 +
@@ -75,13 +74,14 @@ begin
             img_w_out <= image_width;
             img_h_out <= image_height;
 
-            --report "Image dimensions - Width: " & integer'image(image_width) & 
+            -- Debug output panjang x lebar
+            -- report "Image dimensions - Width: " & integer'image(image_width) & 
                     --", Height: " & integer'image(image_height);
 
-            -- Calculate padding per row
+            -- Kalkulasi Padding
             padding := (4 - (image_width * 3) mod 4) mod 4;
 
-            -- Read pixel data into the array
+            -- Membaca pixel ke array
             for row_i in 0 to image_height - 1 loop
                 for col_i in 0 to image_width - 1 loop
                     -- Read and store blue pixel
@@ -99,7 +99,7 @@ begin
                     red := std_logic_vector(to_unsigned(character'pos(char), 8));
                     image_data(row_i)(col_i).red := red;
 
-                    -- Debug output for each pixel
+                    -- Debug output setiap pixel
                     --report "Blue: " & to_string(blue) &
                             --", Green: " & to_string(green) &
                             --", Red: " & to_string(red);
@@ -113,10 +113,11 @@ begin
 
             -- Output image data
             image_out <= image_data;
+
+            -- Debug signal
             see <= image_data(0)(0).red;
 
-            -- Indicate processing completion
-            write_en <= '1';
+            -- Flag selesai
             processing_done <= '1';
             done <= '1';
 

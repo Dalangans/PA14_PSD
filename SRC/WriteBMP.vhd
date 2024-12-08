@@ -38,22 +38,22 @@ begin
                 padding := (4 - image_width*3 mod 4) mod 4;
                 
 
-                -- Write header (hardcoded for simplicity)
+                -- Tulis Header hasil compress ke file output
                 for i in 0 to 53 loop
                     write(out_file, header(i));
                 end loop;
     
                 for row_i in 0 to image_height - 1 loop                    
                     for col_i in 0 to image_width - 1 loop
-                    -- Write blue pixel
+                    -- blue pixel
                     write(out_file,
                         character'val(to_integer(unsigned(image_data(row_i)(col_i).blue))));
                     
-                    -- Write green pixel
+                    -- green pixel
                     write(out_file,
                         character'val(to_integer(unsigned(image_data(row_i)(col_i).green))));
                     
-                    -- Write red pixel
+                    -- red pixel
                     write(out_file,
                         character'val(to_integer(unsigned(image_data(row_i)(col_i).red))));
                     
@@ -66,7 +66,7 @@ begin
                     end loop;
                     
                 end loop;
-                -- Indicate completion
+                -- close file
                 file_close(out_file);
                 report "file closed";
             end if;

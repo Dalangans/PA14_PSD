@@ -63,15 +63,12 @@ begin
         wait for 100 ns;
         start <= '0';
 
-        -- Wait until status = '1'
+        -- Wait for the FSM to reach the done state (status = '1')
         wait until status = '1';
-        if status = '1' then 
-            wait;
-        end if;
-        assert false report "Simulation ended after status = 1" severity note;
 
-        -- Stop the simulation
-        wait; -- Optionally replace with assert false to terminate simulation in some tools
+        -- Terminate the simulation after one FSM cycle
+        report "Simulation completed successfully." severity note;
+        assert false report "End of simulation" severity failure;
     end process stim_proc;
 
 end architecture tb;

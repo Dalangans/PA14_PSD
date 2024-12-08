@@ -23,8 +23,7 @@ architecture rtl of TopLevel is
             img_w_out   : out integer;
             img_h_out   : out integer;
             header_out  : out header_type;
-            image_out   : out image_type;
-            write_en    : out std_logic 
+            image_out   : out image_type
         );
     end component;
 
@@ -58,7 +57,6 @@ architecture rtl of TopLevel is
     end component;
 
     signal done_component        : std_logic;
-    signal write_en              : std_logic := '0';
     signal read_done, write_done : std_logic := '0';
     signal img_w_in_tp           : integer := 0;
     signal img_h_in_tp           : integer := 0;
@@ -87,8 +85,7 @@ begin
             img_w_out   => img_w_in_tp,
             img_h_out   => img_h_in_tp,
             header_out  => header_in_tp,
-            image_out   => image_in_tp,
-            write_en    => write_en 
+            image_out   => image_in_tp
         );
 
     compr_inst : ImageCompressor
@@ -107,7 +104,6 @@ begin
             done            => done_component
         );
 
-    -- Instantiate WriteBMP
     write_inst: WriteBMP
         port map (
             clk         => clk,
@@ -119,12 +115,11 @@ begin
             image_in    => image_out_tp
         );
         
-        proc_name: process(clk, rst)
+        FSM: process(clk, rst)
         begin
             if rst = '1' then
                 current_state <= idle;
                 start_r     <= '0';
-                write_en    <= '0';
                 start_comprs<= '0';
                 start_wr    <= '0';
                 status      <= '0';
@@ -132,7 +127,6 @@ begin
                 case current_state is
                     when idle =>
                         start_r     <= '0';
-                        write_en    <= '0';
                         start_comprs<= '0';
                         start_wr    <= '0';
                         status      <= '0';
@@ -165,8 +159,9 @@ begin
                             start_wr <='1';
                             current_state <= writing;
                         end if;
-                        report "Current state: " & state_type'image(current_state);
-                        report "write_done signal: " & std_logic'image(write_done);
+                        -- debug
+                        -- report "Current state: " & state_type'image(current_state);
+                        -- report "write_done signal: " & std_logic'image(write_done);
 
                         
 
@@ -174,16 +169,24 @@ begin
                         if write_done = '1' then
                             start_wr <= '0';
                             current_state <= done;
-                            report "Current state: " & state_type'image(current_state);
-                            report "write_done signal: " & std_logic'image(write_done);
+                            -- debug 
+                            -- report "Current state: " & state_type'image(current_state);
+                            -- report "write_done signal: " & std_logic'image(write_done);
 
                         end if;
                     
                     when done =>
-                        report "Current state: " & state_type'image(current_state);
-                        report "write_done signal: " & std_logic'image(write_done);
+                        -- debug
+                        -- report "Current state: " & state_type'image(current_state);
+                        -- report "write_done signal: " & std_logic'image(write_done);
                         status <= '1';
+                        if start = '0' then
+                            current_state <= idle;
+                        end if;
+
+                    when others =>
+                        current_state <= idle;
                 end case;
             end if;
-        end process proc_name;
+        end process FSM;
 end architecture rtl;
